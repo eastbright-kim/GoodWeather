@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB431E7D25D2108800F4585A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB431E7C25D2108800F4585A /* WeatherModel.swift */; };
+		DB431E8025D2187000F4585A /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB431E7F25D2187000F4585A /* WeatherViewModel.swift */; };
+		DB431E8825D21A6100F4585A /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB431E8725D21A6100F4585A /* Webservice.swift */; };
+		DB431E8E25D2523400F4585A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB431E8D25D2523400F4585A /* SettingsTableViewController.swift */; };
 		DB80A11A25D16727008C59FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A11925D16727008C59FE /* AppDelegate.swift */; };
 		DB80A11C25D16727008C59FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A11B25D16727008C59FE /* SceneDelegate.swift */; };
-		DB80A11E25D16727008C59FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A11D25D16727008C59FE /* ViewController.swift */; };
 		DB80A12125D16727008C59FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB80A11F25D16727008C59FE /* Main.storyboard */; };
 		DB80A12325D16728008C59FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB80A12225D16728008C59FE /* Assets.xcassets */; };
 		DB80A12625D16728008C59FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB80A12425D16728008C59FE /* LaunchScreen.storyboard */; };
+		DB80A13025D1857D008C59FE /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A12F25D1857D008C59FE /* WeatherTableViewCell.swift */; };
+		DB80A13625D1863E008C59FE /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A13525D1863E008C59FE /* WeatherListTableViewController.swift */; };
+		DB80A13925D1864B008C59FE /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80A13825D1864B008C59FE /* AddCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB431E7C25D2108800F4585A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		DB431E7F25D2187000F4585A /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		DB431E8725D21A6100F4585A /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		DB431E8D25D2523400F4585A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		DB80A11625D16727008C59FE /* GoodWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB80A11925D16727008C59FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB80A11B25D16727008C59FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB80A11D25D16727008C59FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB80A12025D16727008C59FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB80A12225D16728008C59FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB80A12525D16728008C59FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB80A12725D16728008C59FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB80A12F25D1857D008C59FE /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		DB80A13525D1863E008C59FE /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
+		DB80A13825D1864B008C59FE /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB431E7A25D2107E00F4585A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB431E7C25D2108800F4585A /* WeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB431E8325D2188300F4585A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB431E7F25D2187000F4585A /* WeatherViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		DB431E8625D21A4300F4585A /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				DB431E8725D21A6100F4585A /* Webservice.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 		DB80A10D25D16727008C59FE = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +92,37 @@
 		DB80A11825D16727008C59FE /* GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
+				DB431E8625D21A4300F4585A /* WebService */,
+				DB431E8325D2188300F4585A /* View Model */,
+				DB431E7A25D2107E00F4585A /* Model */,
+				DB80A13425D1861D008C59FE /* Controllers */,
+				DB80A12E25D1854A008C59FE /* Tableview Cell */,
 				DB80A11925D16727008C59FE /* AppDelegate.swift */,
 				DB80A11B25D16727008C59FE /* SceneDelegate.swift */,
-				DB80A11D25D16727008C59FE /* ViewController.swift */,
 				DB80A11F25D16727008C59FE /* Main.storyboard */,
 				DB80A12225D16728008C59FE /* Assets.xcassets */,
 				DB80A12425D16728008C59FE /* LaunchScreen.storyboard */,
 				DB80A12725D16728008C59FE /* Info.plist */,
 			);
 			path = GoodWeather;
+			sourceTree = "<group>";
+		};
+		DB80A12E25D1854A008C59FE /* Tableview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB80A12F25D1857D008C59FE /* WeatherTableViewCell.swift */,
+			);
+			path = "Tableview Cell";
+			sourceTree = "<group>";
+		};
+		DB80A13425D1861D008C59FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB80A13525D1863E008C59FE /* WeatherListTableViewController.swift */,
+				DB80A13825D1864B008C59FE /* AddCityViewController.swift */,
+				DB431E8D25D2523400F4585A /* SettingsTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB80A11E25D16727008C59FE /* ViewController.swift in Sources */,
+				DB80A13925D1864B008C59FE /* AddCityViewController.swift in Sources */,
+				DB80A13025D1857D008C59FE /* WeatherTableViewCell.swift in Sources */,
+				DB431E8825D21A6100F4585A /* Webservice.swift in Sources */,
 				DB80A11A25D16727008C59FE /* AppDelegate.swift in Sources */,
+				DB431E8025D2187000F4585A /* WeatherViewModel.swift in Sources */,
+				DB80A13625D1863E008C59FE /* WeatherListTableViewController.swift in Sources */,
+				DB431E7D25D2108800F4585A /* WeatherModel.swift in Sources */,
 				DB80A11C25D16727008C59FE /* SceneDelegate.swift in Sources */,
+				DB431E8E25D2523400F4585A /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
