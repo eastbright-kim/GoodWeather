@@ -19,7 +19,6 @@ extension WeatherListViewModel {
     }
 }
 
-
 struct WeatherViewModel {
     
     let weatherModel: WeatherModel
