@@ -14,5 +14,6 @@ struct WeatherModel: Decodable {
 }
 
 struct Main: Decodable {
+    
     let temp: Double
 }

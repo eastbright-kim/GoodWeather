@@ -12,5 +12,4 @@ class WeatherTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var degreeLabel: UILabel!
-    
 }

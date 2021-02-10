@@ -26,19 +26,19 @@ struct WeatherViewModel {
 
 extension WeatherViewModel {
     
-    var cityName: String? {
+    var cityName: String {
         return weatherModel.name
     }
     
-    var temperature: String? {
+    var celsius: String {
         get{
             let kelvin = weatherModel.main.temp
             let celsius = kelvin - 273
             return String(format: "%.2f", celsius)
         }
-        
     }
-    var fahrenheit: String? {
+    
+    var fahrenheit: String {
         get{
             let kelvin = weatherModel.main.temp
             let fah = (kelvin - 273) * 1.8 + 32

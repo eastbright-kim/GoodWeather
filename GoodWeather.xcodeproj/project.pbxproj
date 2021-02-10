@@ -92,11 +92,11 @@
 		DB80A11825D16727008C59FE /* GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
-				DB431E8625D21A4300F4585A /* WebService */,
-				DB431E8325D2188300F4585A /* View Model */,
 				DB431E7A25D2107E00F4585A /* Model */,
-				DB80A13425D1861D008C59FE /* Controllers */,
 				DB80A12E25D1854A008C59FE /* Tableview Cell */,
+				DB431E8325D2188300F4585A /* View Model */,
+				DB80A13425D1861D008C59FE /* Controllers */,
+				DB431E8625D21A4300F4585A /* WebService */,
 				DB80A11925D16727008C59FE /* AppDelegate.swift */,
 				DB80A11B25D16727008C59FE /* SceneDelegate.swift */,
 				DB80A11F25D16727008C59FE /* Main.storyboard */,

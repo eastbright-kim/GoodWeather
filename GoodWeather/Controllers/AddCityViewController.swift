@@ -10,7 +10,7 @@ import UIKit
 
 protocol MakingWeatherViewModelDelegate {
     func appendWeatherVM(cityName: String, vc: UIViewController)
-    func tableViewReload()
+    func tableViewReloadFromAddcity(vc: UIViewController)
 }
 
 class AddCityViewController: UIViewController {
@@ -19,16 +19,16 @@ class AddCityViewController: UIViewController {
     var cityName: String?
     var delegate: MakingWeatherViewModelDelegate?
     
+    
+    
     @IBAction func saveCityButtonPressed(){
-        
         if let cityName = cityNameTextField.text {
             self.cityName = cityName
             delegate?.appendWeatherVM(cityName: cityName, vc: self)
         }
     }
-    
     @IBAction func close(){
-        delegate?.tableViewReload()
+        delegate?.tableViewReloadFromAddcity(vc: self)
         self.dismiss(animated: true, completion: nil)
     }
 }

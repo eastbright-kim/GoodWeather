@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol SetUnit {
-    func setTableview()
+protocol SetUnitDelegate {
+    func reloadTableviewFromSettings(vc: UIViewController)
 }
 
 class SettingsTableViewController: UITableViewController {
     
     let settings = ["Celsius", "Fahrenheit"]
     var isCelsius = true
-    var delegate: SetUnit?
+    var delegate: SetUnitDelegate?
     let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
@@ -34,7 +34,6 @@ class SettingsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
         cell.textLabel?.text = settings[indexPath.row]
-        
         return cell
     }
     
@@ -51,7 +50,7 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func closePressed(_ sender: UIBarButtonItem) {
         defaults.set(WeatherListTableViewController.shared.isCelsius, forKey: "TrueOrNot")
-        delegate?.setTableview()
+        delegate?.reloadTableviewFromSettings(vc: self)
         dismiss(animated: true, completion: nil)
     }
     
