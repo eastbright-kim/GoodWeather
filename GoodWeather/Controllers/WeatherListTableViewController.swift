@@ -18,9 +18,8 @@ class WeatherListTableViewController: UITableViewController, MakingWeatherViewMo
     let defaults = UserDefaults.standard
     var weatherListViewModel = WeatherListViewModel()
     static var shared = WeatherListTableViewController()
-    var isCelsius = true
+    var isCelsius: Bool? = nil
     var unitDefault: Bool?
-    
     
     
     func appendWeatherVM(cityName: String, vc: UIViewController) {
@@ -43,7 +42,6 @@ class WeatherListTableViewController: UITableViewController, MakingWeatherViewMo
 //        isCelsius = defaults.bool(forKey: "celsiusOrfeh")
 //        print(isCelsius)
         unitDefault = defaults.bool(forKey: "TrueOrNot")
-        print(unitDefault)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,36 +84,47 @@ class WeatherListTableViewController: UITableViewController, MakingWeatherViewMo
            let fah = weatherListViewModel.weatherListViewModel[indexPath.row].fahrenheit
         {
             cell.cityNameLabel.text = cityName
-            
-            if let defaults = self.unitDefault {
+ 
+            if let check = WeatherListTableViewController.shared.isCelsius {
+                let result = check ? temperature : fah
+                cell.degreeLabel.text = result
                 
-                if defaults == true {
-                    if WeatherListTableViewController.shared.isCelsius == true {
-                        let result = defaults ? temperature : fah
-                        cell.degreeLabel.text = result
-                        print("here1\(defaults)")
-                    } else {
-                        let result = WeatherListTableViewController.shared.isCelsius ? temperature : fah
-                        cell.degreeLabel.text = result
-                        print("here1\(defaults)")
-                    }
-                    
-
-                } else {
-                    if WeatherListTableViewController.shared.isCelsius == true {
-                        let result = defaults ? temperature : fah
-                        cell.degreeLabel.text = result
-                        print("here1\(defaults)")
-                    } else {
-                        let changedValue = WeatherListTableViewController.shared.isCelsius
-                        let result = changedValue ? temperature : fah
-                        cell.degreeLabel.text = result
-                        print("here1\(defaults)")
-                    }
-                    
-                    
+            } else {
+                guard let defaults = self.unitDefault else {
+                    fatalError()
                 }
-                
+                let result = defaults ? temperature : fah
+                cell.degreeLabel.text = result
+            }
+//            if let defaults = self.unitDefault {
+//
+//                if defaults == true {
+//                    if WeatherListTableViewController.shared.isCelsius == true {
+//                        let result = defaults ? temperature : fah
+//                        cell.degreeLabel.text = result
+//                        print("here1\(defaults)")
+//                    } else {
+//                        let result = WeatherListTableViewController.shared.isCelsius ? temperature : fah
+//                        cell.degreeLabel.text = result
+//                        print("here1\(defaults)")
+//                    }
+//
+//
+//                } else {
+//                    if WeatherListTableViewController.shared.isCelsius == true {
+//                        let result = defaults ? temperature : fah
+//                        cell.degreeLabel.text = result
+//                        print("here1\(defaults)")
+//                    } else {
+//                        let changedValue = WeatherListTableViewController.shared.isCelsius
+//                        let result = changedValue ? temperature : fah
+//                        cell.degreeLabel.text = result
+//                        print("here1\(defaults)")
+//                    }
+//
+//
+//                }
+//
                 
                 
 //
@@ -181,16 +190,16 @@ class WeatherListTableViewController: UITableViewController, MakingWeatherViewMo
 //                cell.degreeLabel.text = result
 //                print("here2\(result)")
                 //            }
-                //
-                //            if WeatherListTableViewController.shared.isCelsius != self.unitDefault {
-                //
-                //            }
-                
-                
-            }
+            //
+            //            if WeatherListTableViewController.shared.isCelsius != self.unitDefault {
+            //
+            //            }
             
             
         }
         return cell
+        
     }
+    
+    
 }

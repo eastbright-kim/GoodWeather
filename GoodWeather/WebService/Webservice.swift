@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case urlError
+    case decodingError
+}
+
 struct Webservice {
     
     func fetchWether(cityName: String, completion: @escaping ((WeatherModel) -> Void)){
